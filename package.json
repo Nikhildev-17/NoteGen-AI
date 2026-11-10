@@ -1,0 +1,22 @@
+{
+  "name": "youtube-ai-summarizer-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "YouTube AI Summarizer & Notes Generator - MERN Stack Application",
+  "scripts": {
+    "install:server": "npm --prefix server install",
+    "install:client": "npm --prefix client install",
+    "install:all": "npm install && npm run install:server && npm run install:client",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm run dev:server\" \"npm run dev:client\"",
+    "build:client": "npm --prefix client run build",
+    "build": "npm run build:client",
+    "start:server": "npm --prefix server start",
+    "start": "npm run start:server",
+    "test": "npm --prefix server test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
